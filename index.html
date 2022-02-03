@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="load" class="loader">
+            <!-- 
+                Idée pour le loader : https://codepen.io/ncerminara/pen/Dvgawq   
+                & le site https://www.infinitestudio.fr/2014/02/12/sabres-laser-en-css3/  -->
+        <div id='loadC' class="loader-content">
+            <div class="lightsaber ls-yod">
+                <label for="yoda-example"></label>
+                <input type="checkbox" id="yoda-example" >
+                <div class="switch"></div>
+                <div class="plasma yoda"></div>
+            </div>
+            <div class="lightsaber ls-vad">
+                <label for="vader-example"></label>
+                <input type="checkbox" id="vader-example" >
+                <div class="switch"></div>
+                <div class="plasma vader"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class='container-fuild'>  <!-- La petite class container-fluid big up à bootstrap 😁😂😂😂 -->
+        <div class="txt-info caroussel-txt">
+            <div class="content content-txt">
+                <div class="elt elt-txt ">
+                    <img class="logo first" src="./assets/svg/logo_resistance.svg"/>
+                    <div class="txt-inside first" id="first-logo">
+                        <h3 class="title-mov" class="title">Un nouvel espoir</h3>
+                        <p class="descr-mov" id="desc">C'est le premier opus de la saga Star Wars par sa date de sortie, 
+                            mais le quatrième selon l'ordre chronologique de l'histoire.</p>
+                    </div>
+                </div>
+                <div class="elt elt-txt ">
+                    <img class="logo second" id="second-logo" src="./assets/svg/logo_empire.svg"/>
+                    <div class="txt-inside  second">
+                        <h3 class="title-mov" class="title">L'empire contre attaque</h3>
+                        <p class="descr-mov" id="desc">La guerre entre le maléfique Empire galactique et son antagoniste, l’Alliance rebelle, bat son plein.
+                        </p>
+                    </div>
+                </div>
+                <div class="elt elt-txt ">
+                    <img class="logo third" id="third-logo" src="./assets/svg/logo_jedi.svg"/>
+                    <div class="txt-inside  third">
+                        <h3 class="title-mov" class="title">Le retour du Jedi</h3>
+                        <p class="descr-mov" id="desc">Le maléfique Empire galactique construit une nouvelle station spatiale Étoile de la mort pour anéantir définitivement l'Alliance rebelle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <div class="content content-img">
+                <div class="elt">
+                    <img class="img-mov img-move-first " id="img-mov" src="./assets/images/77.png"/>
+                </div>
+                <div class="elt">
+                    <img class="img-mov img-move-second" id="img-mov-sec" src="./assets/images/80.png"/>
+                </div>
+                <div class="elt">
+                    <img class="img-mov img-move-third" id="img-mov-tr" src="./assets/images/83.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="year">
+            <p class="txt-year">19</p>
+            <div class="content content-year">
+                <div class="elements elements-year">
+                    <span class="year-dyn" >77</span>
+                </div>
+                <div class="elements elements-year">
+                    <div class="year-dyn" id="dyn">8
+                        <ul>
+                            <li><span>0</span></li>
+                            <li class="ouiJeSait"><span> 3 </span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="elements elements-year">
+                    <span class="year-dyn" >XXXXXX</span>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="btn" id='btn'>
+                <img src="./assets/svg/arrow.svg" id="btnLess" alt="arrow"  class="btn-i left close">
+                <img src="./assets/svg/arrow.svg" id="btnMore" alt="arrow"  class="btn-i right">
+            </div>
+            <div class="barre-full">
+               <div class='content-barre'>
+                   
+                   <div class="elt-barre-round">
+                       <div class="round  active-round"></div>
+                       <div class="barre "></div>
+                    </div>
+                    <div class="elt-barre-round">
+                        <div class="round "></div>
+                        <div class="barre"></div>
+                    </div>
+                    <div class="elt-barre-round">
+                        <div class="round"></div>
+                        <div class="barre"></div>
+                    </div>
+                    <div class="elt-barre-round">
+                        <div class="round"></div>
+                        <div class="barre"></div>
+                    </div>
+                    <div class="elt-barre-round">
+                        <div class="round"></div>
+                    </div>
+                    <div class="barre-back barre"></div>
+               </div>
+            </div>
+        </div>
+    </div>
+   <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Jaune : #FFF38A
+
+jaune etein : #827B68
+background:#060447
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+font-family: 'Montserrat', sans-serif;
+
+@font-face {
+  font-family: GT-Ultra-Standard-Bold-Trial;
+  // woff2 pour les navigateurs les plus récents
+  src:  url('GT-Ultra-Standard-Bold-Trial.woff2') format('woff2'),
+ }
+/* Le retour du Jedi */
+
+1983
+
+/* Le maléfique Empire galactique construit une nouvelle station spatiale Étoile de la mort pour anéantir définitivement l'Alliance rebelle. */
+
+
+/* L'empire contre attaque */
+
+1980
+La guerre entre le maléfique Empire galactique et son antagoniste, l’Alliance rebelle, bat son plein.
+
+/* Un nouvel espoir */
+
+1977
+/* C'est le premier opus de la saga Star Wars par sa date de sortie, mais le quatrième selon l'ordre chronologique de l'histoire. */
+

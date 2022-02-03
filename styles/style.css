@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+@font-face {
+  font-family: GT-Ultra-Standard-Bold-Trial;
+  src:  url('./assets/font/GT-Ultra-Standard-Bold-Trial.woff2') format('woff2');
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    color: #FFF38A;
+}
+.txt-info, .nav{
+    padding-left: 80px;
+}
+.year{
+    margin-left: 80px
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+    background: #060447;
+    position: relative;
+}
+ /* Loader */
+.loader {
+    z-index: 10;
+    position: absolute;
+    background-color: #060447;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    text-align: center;
+}
+.loader-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;   
+}
+.lightsaber{
+    position: relative;
+    top: 500px;
+}
+.ls-yod{
+    left: -150px;
+    transform: rotate(45deg);
+}
+.ls-vad{
+    left: 150px;
+    top:512px;
+    transform: rotate(-45deg);
+}
+.lightsaber label {
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 88;
+	text-indent: -9999px;
+	width: 15px;
+	height: 50px;
+	border-bottom: solid 4px grey;
+	border-top: solid 5px grey;
+	border-radius: 5px;	
+	background: rgb(226,226,226); /* Old browsers */
+	background: linear-gradient(to right, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 */
+}
+.lightsaber .switch {
+	background: #B94A37;
+	width: 5px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	bottom: 25px;
+	left: 13px;
+	transition: left 200ms;	
+	border-radius: 10px;
+}
+.ls-yod .switch {
+	left: -4px;
+}
+.lightsaber input[type=checkbox] {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0;	
+	z-index: 77;
+}
+.lightsaber .plasma {
+	transition: height 300ms;	
+	border-radius: 12px 12px 0 0;
+	position: absolute;
+	bottom: 55px;
+	left: 2px;
+	width: 10px;
+	display: block;
+	filter: blur(1px);
+	height: 0;
+}
+.lightsaber input[type=checkbox]:checked ~ div.plasma {
+	height: 250px;
+}
+.lightsaber input[type=checkbox]:hover ~ div.switch {
+	background: #c09853;
+	left: 12px;
+}
+.ls-yod input[type=checkbox]:hover ~ div.switch {
+	background: #c09853;
+	left: -3px;
+}
+.lightsaber input[type=checkbox]:checked ~ div.switch {
+	background: #468847;
+}
+.yoda {
+	background: rgb(229,17,21); 
+	background: linear-gradient(to right, rgb(135,220,90) 0%,rgb(254,254,254) 30%,rgb(254,254,254) 50%,rgb(254,254,254) 70%,rgb(135,220,90) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87dc5a', endColorstr='#87dc5a',GradientType=1 ); 
+	animation-name: yoda;	
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.vader {
+	background: rgb(229,17,21); 
+	background: linear-gradient(to right, rgb(229,17,21) 0%,rgb(254,254,254) 30%,rgb(254,254,254) 50%,rgb(254,254,254) 70%,rgb(229,17,21) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87dc5a', endColorstr='#87dc5a',GradientType=1 ); 
+	animation-name: vader;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+div.switch, div.plasma {	 
+    transform : translateZ(0); 
+}
+/*Loader END*/
+
+.container-fuild {
+    width: 1200px;
+    margin: 65px auto 0 ;    
+    padding: 20px;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1.15fr .85fr; 
+    grid-template-rows: 1fr 0.8fr 0.2fr; 
+    grid-template-areas: 
+    "txt img"
+    "year img"
+    "nav nav"; 
+    grid-gap:1.5rem 0;
+}
+.txt-info {
+    grid-area :txt;
+    overflow: hidden;
+}
+.title-mov{
+    font-size: 1.45rem;
+    margin-bottom: 16px;
+}
+.descr-mov{
+    font-size: .7rem;
+    font-weight: 300;
+    max-width: 0500px;
+}
+.image{
+    width: 80%;
+    grid-area: img;
+    overflow: hidden;
+}
+.content{
+    display: flex;
+    width: 100%;
+}
+.elt{
+    display: flex;
+    width:fit-content;
+    flex: 1 0 100%;
+}
+.elt .img-mov{
+    width: 100%;
+    height: 95%;
+}
+.elt-txt{
+    display: block;
+}
+.year{
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    font-family: GT-Ultra-Standard-Bold-Trial, "Open Sans";
+    grid-area: year;
+}
+.txt-year{
+    z-index: 1;
+}
+.content-year{
+    display: flex;
+}
+.elements-year{
+    flex: 1 0 100%;
+}
+p.txt-year, .year-dyn, .bonus,div.year-dyn > ul > li >span{
+    font-weight: bold;
+    font-size: 7rem;
+}
+.nav { 
+    display: flex;
+    height: fit-content;
+    grid-area: nav; }
+.btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
+.btn img{
+    width: 45px;
+    height:fit-content
+}
+.btn-i{
+    cursor: pointer;
+    background: transparent;
+}
+.left {
+    transform: rotate(180deg);
+}
+.close{
+    filter: invert(50%) sepia(21%) saturate(307%) hue-rotate(6deg) brightness(92%) contrast(85%);
+}
+
+.barre, .round{
+    background: #827B68;
+}
+.round{
+    display: flex;
+    border: solid #827B68 2px;
+    z-index: 2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.barre-full {
+    position: relative;
+    width: 100%;
+}
+.barre-back{
+    z-index: 0!important;
+    background:#827B68!important;
+    width: 80%!important;
+}
+.barre {
+    z-index: 1;
+    position: absolute;
+    height: 2px;
+    top: 47%;
+    width: 0;
+    transition-duration: 200ms;
+}
+.active-round{
+    background: #FFF38A;
+    
+}
+.active-barre{
+     background: #FFF38A;
+     width: 200px;
+     animation: 200ms barre ease-out;
+}
+.none {
+    display: none;
+}
+.active {
+    opacity: 1;
+    animation: 300ms activeT 0.1s  ease-in ;
+}
+.activeBis{
+    opacity: 1;
+    animation: 300ms activeV 0.1s ease-in ;
+}
+.logoA{
+    opacity: 1;
+    animation: 300ms activeLR 0.1s ease-in ;
+}
+.logoB{
+    opacity: 1;
+    animation: 300ms activeL 0.1s ease-in ;
+}
+div.year-dyn, div.year-dyn ul{
+    display: flex;
+}
+div.year-dyn{
+    overflow: hidden;
+}
+div.year-dyn ul {
+    width: 100%;
+    list-style:none
+}
+div.year-dyn ul li{
+    width: 100%;
+    flex: 1 0 100%;
+}
+@keyframes barre{
+    from{
+        width: 0
+    }to{
+        width: 200px
+    }
+}
+@keyframes activeT {
+    from{
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes activeLR {
+    from{
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes activeV {
+    from{
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes activeL {
+    from{
+        opacity: 0;
+        transform: translateX(-62px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/* Animations */
+@keyframes yoda {
+	from { box-shadow: 0 0 10px #7EC855; }
+	50% { box-shadow: 0 0 16px #7EC855; }
+	to { box-shadow: 0 0 10px #7EC855; }
+}
+
+@keyframes vader {
+	from { box-shadow: 0 0 10px #e51115; }
+	50% { box-shadow: 0 0 16px #e51115; }
+	to { box-shadow: 0 0 10px #e51115; }
+}
+.content-barre{
+    justify-content: space-around;
+    width:100%;
+    display: flex
+}
+.elt-barre-round{
+    display: flex
+}
+
+@media screen and (max-width:1180px){
+    *{
+        font-size: 1.8rem
+    }
+    body{
+        height: fit-content
+    }
+    .image{
+        margin: 0 auto
+    }
+    div.txt-inside {
+        text-align: center;
+    }
+    .elt .img-mov {
+        width: 60%;
+        margin: auto;
+    }
+    .year{
+        align-items: center;
+        margin-left: 40px;
+    }
+    .container-fuild {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        grid-gap: inherit!important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .9fr 1.5fr .2fr;
+        grid-template-areas: "txt year"
+                            "img img"
+                            "nav nav";
+        grid-gap: 1.5rem 0;
+    }
+    .active-barre{
+        width: 185px;
+    }
+    .ouiJeSait{
+        transform: translateX(10px)
+    }
+    p.txt-year, .year-dyn, .bonus, div.year-dyn > ul > li >span {
+        font-weight: bold;
+        font-size: 4.5rem;
+    }
+    .txt-info, .nav {
+        padding-left: 0px;
+    }
+
+    @keyframes barre{
+        from{
+            width: 0
+        }to{
+            width: 185px
+        }
+    }
+}
+@media screen and (max-width:800px){
+    p.txt-year, .year-dyn, .bonus, div.year-dyn > ul > li >span {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+     .container-fuild {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        display: grid;
+        grid-gap: inherit!important;
+        grid-template-columns: 1fr;
+        grid-template-areas: "txt "
+                            "img "
+                            "year"
+                            "nav ";
+        grid-gap: 1.5rem 0;
+        grid-template-rows: 0.6fr 1fr .3fr;
+    }
+    .descr-mov {
+        margin: auto;
+    }
+    .nav {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        height: 31%;
+        right: 0;
+    }
+    .btn {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+    }
+    img#btnMore {
+        right: 0;
+        position: absolute;
+    }
+    .barre-full {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .content-barre{
+        width: 80%;
+        margin: auto;
+    }
+    .barre-back {
+        width: 75%!important;
+    }
+    .content-barre {
+        width: 80%;
+        margin: auto;
+        border-radius: 30px;
+        padding:3px 0;
+        backdrop-filter: brightness(0.2);
+    }
+    .active-barre {
+        width: 97px;
+    }
+    @keyframes barre{
+        from{
+            width: 0
+        }to{
+            width: 97px
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .container-fuild {
+        grid-template-rows: 0.5fr 1fr .2fr;
+    }
+     .elt.elt-txt {
+        display: flex!important;
+        flex-direction: column;
+    }
+        img.logo.first {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .img-mov{
+        width:100%!important;
+    }
+    .nav {
+        top: 64%;
+        height:21%;
+    }
+}
+@media screen and(max-width:400px){
+    .container-fuild {
+        grid-template-rows: 0.7fr .7fr .2fr;
+    }
+}
